@@ -3,66 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>عيادة أسنان د/ أحمد الشاعر | طب وجراحة وتجميل الأسنان - مدينة نصر</title>
-  <meta name="description" content="عيادة د/ أحمد الشاعر لطب وجراحة وتجميل الأسنان في مدينة نصر. رعاية طبية متكاملة بأحدث الأجهزة وتقنيات التعقيم لابتسامة مثالية بدون ألم. احجز موعدك الآن.">
-  <meta name="theme-color" content="#0284c7">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="عيادة أسنان د/ أحمد الشاعر | مدينة نصر">
-  <meta property="og:description" content="رعاية متكاملة لأسنانك في تجربة مريحة، مع سهولة التواصل وحجز الموعد. عرض خاص على الكشف والخدمات.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="images/doctor-hero.jpg">
+  <title>عيادة أسنان | د/ أحمد الشاعر - مدينة نصر</title>
+  <meta name="description" content="عيادة أسنان د/ أحمد الشاعر في مدينة نصر. رعاية متكاملة لأسنانك في تجربة مريحة وسهولة في التواصل وحجز المواعيد.">
+  <meta name="theme-color" content="#087bdc">
 
   <!-- Google Fonts: Cairo -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* ==========================================================================
-       CSS Variables & Reset
-       ========================================================================== */
     :root {
-      --primary: #0284c7;
-      --primary-hover: #0369a1;
-      --primary-dark: #075985;
-      --primary-light: #e0f2fe;
-      --primary-glow: rgba(2, 132, 199, 0.28);
-      
-      --accent-teal: #0d9488;
-      --accent-cyan: #06b6d4;
-      --accent-amber: #f59e0b;
-      
-      --navy-950: #06152b;
-      --navy-900: #0d233f;
-      --navy-850: #132f52;
-      --navy-800: #1c3d67;
-      
-      --text-heading: #091e36;
-      --text-body: #334e68;
-      --text-muted: #627d98;
-      --text-subtle: #829ab1;
-      
-      --bg-page: #f8fafc;
-      --bg-subtle: #f0f7fd;
-      --bg-card: #ffffff;
-      
-      --border-subtle: #e2edf6;
-      --border-focus: #bae6fd;
-      
+      --primary: #087bdc;
+      --primary-hover: #0666b8;
+      --primary-soft: #eaf6ff;
+      --navy: #102c4f;
+      --navy-light: #1c406c;
+      --muted: #6d8195;
+      --bg: #f6fbff;
+      --card-bg: #ffffff;
+      --line: #e2edf6;
+      --shadow-sm: 0 4px 14px rgba(16, 44, 79, 0.05);
+      --shadow-md: 0 10px 30px rgba(16, 44, 79, 0.08);
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
       --radius-full: 9999px;
-      --radius-2xl: 28px;
-      --radius-xl: 20px;
-      --radius-lg: 16px;
-      --radius-md: 12px;
-      
-      --shadow-sm: 0 2px 8px rgba(13, 35, 63, 0.04);
-      --shadow-md: 0 10px 25px -4px rgba(13, 35, 63, 0.08), 0 4px 10px -2px rgba(13, 35, 63, 0.04);
-      --shadow-lg: 0 20px 40px -10px rgba(13, 35, 63, 0.12), 0 8px 16px -4px rgba(13, 35, 63, 0.06);
-      --shadow-glow: 0 12px 35px -5px var(--primary-glow);
-      
-      --font-main: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     *, *::before, *::after {
@@ -73,13 +39,14 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 86px;
+      scroll-padding-top: 80px;
     }
 
     body {
-      font-family: var(--font-main);
-      background-color: var(--bg-page);
-      color: var(--text-body);
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: var(--bg);
+      color: #17324d;
       line-height: 1.8;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
@@ -96,927 +63,462 @@
       display: block;
     }
 
-    button {
-      font-family: inherit;
-      border: none;
-      background: none;
-      cursor: pointer;
-    }
-
     .container {
-      width: min(1200px, 92%);
+      width: min(1160px, 92%);
       margin-inline: auto;
     }
 
-    /* Scroll progress bar */
-    #scroll-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3.5px;
-      background: linear-gradient(90deg, var(--accent-cyan), var(--primary), #38bdf8);
-      transform-origin: 100% 50%;
-      transform: scaleX(0);
-      z-index: 100;
-      transition: transform 0.08s linear;
-    }
-
-    /* ==========================================================================
-       Buttons & Badges
-       ========================================================================== */
+    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 13px 26px;
+      gap: 9px;
+      padding: 12px 22px;
       border-radius: var(--radius-full);
-      transition: var(--transition-smooth);
-      position: relative;
-      overflow: hidden;
-      text-align: center;
+      font-weight: 800;
+      font-size: 0.92rem;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
     }
 
     .btn svg {
       width: 18px;
       height: 18px;
       flex-shrink: 0;
-      transition: transform 0.3s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary) 0%, #0274b3 100%);
+      background: var(--primary);
       color: #ffffff;
-      box-shadow: 0 8px 24px -4px var(--primary-glow);
+      box-shadow: 0 6px 20px rgba(8, 123, 220, 0.28);
     }
 
     .btn-primary:hover {
-      background: linear-gradient(135deg, #038fe0 0%, var(--primary) 100%);
-      box-shadow: 0 14px 32px -4px rgba(2, 132, 199, 0.45);
+      background: var(--primary-hover);
+      box-shadow: 0 8px 24px rgba(8, 123, 220, 0.38);
       transform: translateY(-2px);
     }
 
-    .btn-primary:hover svg {
-      transform: scale(1.15);
+    .btn-ghost {
+      background: var(--primary-soft);
+      color: var(--primary);
     }
 
-    .btn-secondary {
-      background: var(--primary-light);
-      color: var(--primary-dark);
-      font-weight: 700;
-      border: 1px solid rgba(2, 132, 199, 0.15);
-    }
-
-    .btn-secondary:hover {
-      background: #d0ebfd;
-      color: var(--navy-900);
+    .btn-ghost:hover {
+      background: #d8eeff;
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.15);
     }
 
     .btn-white {
       background: #ffffff;
-      color: var(--navy-900);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+      color: var(--primary);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .btn-white:hover {
       background: #f8fafc;
+      transform: translateY(-2px);
+    }
+
+    /* Eyebrow Badge */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--primary-soft);
       color: var(--primary);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-    }
-
-    .btn-whatsapp {
-      background: #25d366;
-      color: #ffffff;
-      box-shadow: 0 8px 22px rgba(37, 211, 102, 0.28);
-    }
-
-    .btn-whatsapp:hover {
-      background: #22bf5b;
-      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.42);
-      transform: translateY(-2px);
-    }
-
-    .badge-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
+      padding: 5px 14px;
       border-radius: var(--radius-full);
-      background: var(--primary-light);
-      color: var(--primary-dark);
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 800;
-      letter-spacing: -0.01em;
-      border: 1px solid rgba(2, 132, 199, 0.18);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
-    .badge-live {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 18px;
-      border-radius: var(--radius-full);
-      background: rgba(2, 132, 199, 0.08);
-      border: 1px solid rgba(2, 132, 199, 0.2);
-      color: var(--primary-dark);
-      font-size: 0.82rem;
-      font-weight: 700;
-      margin-bottom: 18px;
+    .eyebrow svg {
+      width: 14px;
+      height: 14px;
     }
 
-    .pulse-dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: #10b981;
-      position: relative;
-    }
-
-    .pulse-dot::after {
-      content: '';
-      position: absolute;
-      inset: -4px;
-      border-radius: 50%;
-      background: #10b981;
-      opacity: 0.5;
-      animation: pulse-ring 2s infinite ease-out;
-    }
-
-    @keyframes pulse-ring {
-      0% { transform: scale(0.6); opacity: 0.8; }
-      100% { transform: scale(2.2); opacity: 0; }
-    }
-
-    /* ==========================================================================
-       Header & Navigation
-       ========================================================================== */
+    /* Header & Nav */
     header {
       position: sticky;
       top: 0;
       z-index: 90;
-      background: rgba(255, 255, 255, 0.86);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(226, 237, 246, 0.85);
-      transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      transition: box-shadow 0.3s ease;
     }
 
     header.scrolled {
-      background: rgba(255, 255, 255, 0.96);
-      box-shadow: 0 8px 30px rgba(9, 30, 54, 0.06);
-      border-bottom-color: rgba(200, 220, 240, 0.9);
+      box-shadow: var(--shadow-sm);
     }
 
     nav {
-      height: 78px;
+      height: 74px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 13px;
-      transition: transform 0.2s ease;
+      gap: 10px;
     }
 
-    .brand:hover {
-      transform: scale(1.02);
-    }
-
-    .brand-avatar {
-      position: relative;
-      width: 48px;
-      height: 48px;
+    .brand img {
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid var(--primary-light);
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.18);
-    }
-
-    .brand-avatar img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
+      border: 2px solid var(--primary-soft);
     }
 
-    .brand-info small {
+    .brand small {
       display: block;
       color: var(--primary);
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      line-height: 1.2;
     }
 
-    .brand-info b {
-      font-size: 1.1rem;
-      color: var(--navy-950);
+    .brand b {
+      font-size: 1.05rem;
+      color: var(--navy);
       font-weight: 800;
-      line-height: 1.3;
-      display: block;
     }
 
     .nav-links {
       display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .nav-link {
-      font-size: 0.92rem;
+      gap: 22px;
+      font-size: 0.88rem;
       font-weight: 700;
-      color: var(--text-body);
-      position: relative;
-      padding: 6px 0;
-      transition: color 0.25s ease;
+      color: #4d6680;
     }
 
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--primary);
-      border-radius: 2px;
-      transform: scaleX(0);
-      transform-origin: 50% 50%;
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    .nav-links a {
+      transition: color 0.2s ease;
     }
 
-    .nav-link:hover {
+    .nav-links a:hover {
       color: var(--primary);
     }
 
-    .nav-link:hover::after {
-      transform: scaleX(1);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .menu-toggle {
+    /* Mobile toggle */
+    .menu-btn {
       display: none;
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-md);
-      background: var(--bg-subtle);
-      border: 1px solid var(--border-subtle);
-      color: var(--navy-900);
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--primary-soft);
+      color: var(--navy);
       align-items: center;
       justify-content: center;
     }
 
-    .menu-toggle svg {
-      width: 22px;
-      height: 22px;
-    }
-
-    /* Mobile Drawer */
-    .mobile-menu {
+    .mobile-nav {
+      display: none;
       position: fixed;
-      top: 78px;
+      top: 74px;
       left: 0;
       right: 0;
       background: #ffffff;
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 24px;
-      display: flex;
+      border-bottom: 1px solid var(--line);
+      padding: 18px 24px;
       flex-direction: column;
-      gap: 16px;
-      transform: translateY(-110%);
-      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      gap: 12px;
+      box-shadow: var(--shadow-md);
       z-index: 85;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 
-    .mobile-menu.open {
-      transform: translateY(0);
+    .mobile-nav.open {
+      display: flex;
     }
 
-    .mobile-menu a {
-      font-size: 1rem;
+    .mobile-nav a {
       font-weight: 700;
-      color: var(--navy-950);
-      padding: 10px 14px;
-      border-radius: var(--radius-md);
-      transition: background 0.2s;
+      color: var(--navy);
+      padding: 8px 0;
     }
 
-    .mobile-menu a:hover {
-      background: var(--bg-subtle);
-      color: var(--primary);
-    }
-
-    /* ==========================================================================
-       Hero Section
-       ========================================================================== */
+    /* Hero Section */
     .hero {
-      position: relative;
-      padding: 85px 0 65px;
-      background: radial-gradient(120% 100% at 85% 0%, #e8f5ff 0%, #f4faff 45%, var(--bg-page) 100%);
-      overflow: hidden;
-    }
-
-    .hero-glow-1 {
-      position: absolute;
-      top: -120px;
-      right: -80px;
-      width: 520px;
-      height: 520px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(2, 132, 199, 0.12) 0%, transparent 70%);
-      filter: blur(50px);
-      pointer-events: none;
-    }
-
-    .hero-glow-2 {
-      position: absolute;
-      bottom: -150px;
-      left: 5%;
-      width: 450px;
-      height: 450px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
-      filter: blur(60px);
-      pointer-events: none;
+      padding: 60px 0 45px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 55px;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
       align-items: center;
-      position: relative;
-      z-index: 2;
     }
 
     .hero-content h1 {
-      font-size: clamp(2.3rem, 4.4vw, 3.8rem);
-      font-weight: 900;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
       line-height: 1.2;
-      color: var(--navy-950);
-      margin-bottom: 20px;
-      letter-spacing: -0.02em;
+      color: var(--navy);
+      margin: 14px 0 16px;
+      font-weight: 800;
     }
 
-    .hero-content h1 span.gradient-text {
-      background: linear-gradient(135deg, var(--primary) 0%, #0369a1 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
+    .hero-content h1 span {
+      color: var(--primary);
     }
 
-    .hero-desc {
-      font-size: 1.12rem;
-      color: var(--text-body);
-      max-width: 560px;
-      margin-bottom: 32px;
-      line-height: 1.85;
+    .hero-content p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 540px;
+      line-height: 1.8;
+      margin-bottom: 24px;
     }
 
     .hero-actions {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 38px;
+      margin-bottom: 32px;
     }
 
     .hero-trust {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      padding-top: 28px;
-      border-top: 1px solid rgba(226, 237, 246, 0.9);
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
     }
 
     .trust-item {
       display: flex;
-      align-items: flex-start;
-      gap: 11px;
+      align-items: center;
+      gap: 8px;
     }
 
-    .trust-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: var(--radius-md);
-      background: var(--primary-light);
+    .trust-item svg {
+      width: 18px;
+      height: 18px;
       color: var(--primary);
-      display: grid;
-      place-items: center;
       flex-shrink: 0;
     }
 
-    .trust-icon svg {
-      width: 19px;
-      height: 19px;
-    }
-
-    .trust-text b {
+    .trust-item b {
       display: block;
-      color: var(--navy-950);
-      font-size: 0.94rem;
-      font-weight: 800;
-      line-height: 1.3;
+      color: var(--navy);
+      font-size: 0.9rem;
+      line-height: 1.2;
     }
 
-    .trust-text span {
-      display: block;
-      color: var(--text-muted);
-      font-size: 0.78rem;
-      line-height: 1.4;
-    }
-
-    /* Hero Visual & Photo */
-    .hero-visual {
+    /* Photo Frame */
+    .photo-container {
       position: relative;
     }
 
-    .photo-wrapper {
-      position: relative;
-      height: 540px;
-      border-radius: 36px;
+    .photo-card {
+      height: 490px;
+      border-radius: 30px;
       overflow: hidden;
-      background: linear-gradient(160deg, #d8eefe 0%, #c4e4fb 100%);
-      box-shadow: 0 25px 60px -15px rgba(2, 132, 199, 0.22), 0 10px 25px -5px rgba(9, 30, 54, 0.08);
-      border: 4px solid #ffffff;
+      box-shadow: 0 16px 45px rgba(18, 76, 126, 0.12);
+      background: #e8f6ff;
+      position: relative;
     }
 
-    .photo-wrapper img {
+    .photo-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 45% 30%;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      object-position: 45% 35%;
     }
 
-    .photo-wrapper:hover img {
-      transform: scale(1.03);
-    }
-
-    .photo-backdrop-shape {
+    .demo-tag {
       position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 65%, rgba(9, 30, 54, 0.5) 100%);
+      top: 14px;
+      left: 14px;
+      z-index: 3;
+      background: rgba(0, 0, 0, 0.65);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
       pointer-events: none;
     }
 
-    /* Floating Badges */
-    .float-card-doctor {
+    .photo-badge {
       position: absolute;
-      bottom: 24px;
-      right: 24px;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-radius: var(--radius-xl);
-      padding: 14px 20px;
-      box-shadow: 0 16px 36px rgba(9, 30, 54, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 5;
-      animation: float-gentle 4s ease-in-out infinite alternate;
-    }
-
-    .float-card-doctor .icon-badge {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary) 0%, #0369a1 100%);
-      color: #ffffff;
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-    }
-
-    .float-card-doctor .icon-badge svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .float-card-doctor b {
-      display: block;
-      color: var(--navy-950);
-      font-size: 0.95rem;
-      font-weight: 800;
-    }
-
-    .float-card-doctor span {
-      display: block;
-      color: var(--primary);
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-
-    .float-card-rating {
-      position: absolute;
-      top: 24px;
-      left: -20px;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-radius: var(--radius-lg);
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
       padding: 12px 18px;
-      box-shadow: 0 16px 36px rgba(9, 30, 54, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      z-index: 5;
-      animation: float-gentle 4s ease-in-out infinite alternate-reverse;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      z-index: 4;
     }
 
-    .stars-group {
-      display: flex;
-      gap: 2px;
-      color: #f59e0b;
-    }
-
-    .stars-group svg {
-      width: 14px;
-      height: 14px;
-      fill: currentColor;
-    }
-
-    .rating-number {
-      font-size: 0.92rem;
-      font-weight: 800;
-      color: var(--navy-950);
-    }
-
-    .rating-sub {
-      font-size: 0.72rem;
-      color: var(--text-muted);
+    .photo-badge b {
       display: block;
+      color: var(--navy);
+      font-size: 0.95rem;
     }
 
-    @keyframes float-gentle {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-8px); }
+    .photo-badge span {
+      font-size: 0.78rem;
+      color: var(--muted);
     }
 
-    /* ==========================================================================
-       Sections Common Styles
-       ========================================================================== */
+    /* Section Header */
     section {
-      padding: 85px 0;
-      position: relative;
+      padding: 65px 0;
     }
 
     .section-head {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      gap: 24px;
-      margin-bottom: 46px;
+      gap: 20px;
+      margin-bottom: 32px;
       flex-wrap: wrap;
-    }
-
-    .section-head.center {
-      text-align: center;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
     }
 
     .section-head h2 {
-      font-size: clamp(1.9rem, 3.2vw, 2.7rem);
-      font-weight: 900;
-      color: var(--navy-950);
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-      margin-top: 6px;
+      margin: 6px 0 0;
+      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      color: var(--navy);
+      font-weight: 800;
     }
 
     .section-head p {
-      color: var(--text-muted);
-      font-size: 1.02rem;
-      max-width: 540px;
-      line-height: 1.8;
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 500px;
     }
 
-    /* ==========================================================================
-       Services Section
-       ========================================================================== */
-    #services {
-      background-color: var(--bg-page);
-    }
-
-    .services-grid {
+    /* Services Grid */
+    .services-cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 18px;
     }
 
     .service-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-2xl);
-      padding: 32px 28px;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px;
       box-shadow: var(--shadow-sm);
-      transition: var(--transition-smooth);
-      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(350px circle at var(--mouse-x, 50%) var(--mouse-y, 0), rgba(2, 132, 199, 0.08), transparent 70%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      pointer-events: none;
     }
 
     .service-card:hover {
-      transform: translateY(-7px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(2, 132, 199, 0.35);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: #cce4f7;
     }
 
-    .service-card:hover::before {
-      opacity: 1;
-    }
-
-    .service-icon-wrap {
-      width: 58px;
-      height: 58px;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, var(--primary-light) 0%, #edf7ff 100%);
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: var(--primary-soft);
       color: var(--primary);
       display: grid;
       place-items: center;
-      margin-bottom: 22px;
-      transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
-      border: 1px solid rgba(2, 132, 199, 0.15);
+      margin-bottom: 16px;
     }
 
-    .service-icon-wrap svg {
-      width: 30px;
-      height: 30px;
-      stroke-width: 1.8;
-    }
-
-    .service-card:hover .service-icon-wrap {
-      background: linear-gradient(135deg, var(--primary) 0%, #0369a1 100%);
-      color: #ffffff;
-      transform: scale(1.08) rotate(-4deg);
-      box-shadow: 0 10px 22px var(--primary-glow);
+    .service-icon svg {
+      width: 22px;
+      height: 22px;
     }
 
     .service-card h3 {
-      font-size: 1.22rem;
-      font-weight: 800;
-      color: var(--navy-950);
-      margin-bottom: 10px;
-      line-height: 1.35;
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 1.1rem;
+      font-weight: 700;
     }
 
     .service-card p {
-      color: var(--text-body);
-      font-size: 0.92rem;
-      line-height: 1.75;
-      margin-bottom: 22px;
-      flex-grow: 1;
-    }
-
-    .service-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 18px;
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .service-action-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--primary);
-      font-size: 0.86rem;
-      font-weight: 800;
-      transition: gap 0.25s ease, color 0.25s ease;
-    }
-
-    .service-action-link svg {
-      width: 16px;
-      height: 16px;
-      transition: transform 0.25s ease;
-    }
-
-    .service-card:hover .service-action-link {
-      color: var(--primary-dark);
-      gap: 9px;
-    }
-
-    .service-card:hover .service-action-link svg {
-      transform: translateX(-3px);
-    }
-
-    .service-tag {
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 3px 9px;
-      border-radius: var(--radius-full);
-      background: var(--bg-subtle);
-      color: var(--text-muted);
-    }
-
-    /* ==========================================================================
-       Special Offer Banner
-       ========================================================================== */
-    .offer-section {
-      padding: 40px 0;
-    }
-
-    .offer-card {
-      background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 50%, #0b345e 100%);
-      color: #ffffff;
-      border-radius: 34px;
-      padding: clamp(34px, 5vw, 55px);
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      align-items: center;
-      gap: 35px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 25px 60px -15px rgba(6, 21, 43, 0.45);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .offer-card::before {
-      content: '';
-      position: absolute;
-      top: -120px;
-      left: -80px;
-      width: 360px;
-      height: 360px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(2, 132, 199, 0.35) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .offer-card::after {
-      content: '';
-      position: absolute;
-      bottom: -100px;
-      right: 25%;
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .offer-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(10px);
-      padding: 6px 16px;
-      border-radius: var(--radius-full);
-      font-size: 0.82rem;
-      font-weight: 800;
-      color: #38bdf8;
-      margin-bottom: 18px;
-    }
-
-    .offer-badge svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .offer-card h2 {
-      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
-      font-weight: 900;
-      line-height: 1.25;
-      margin-bottom: 12px;
-      color: #ffffff;
-    }
-
-    .offer-card p {
-      color: #cbd5e1;
-      font-size: 1.05rem;
-      line-height: 1.8;
-      max-width: 580px;
-      margin-bottom: 24px;
-    }
-
-    .offer-features {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-
-    .offer-feat {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      margin: 0 0 16px;
+      color: var(--muted);
       font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .service-link {
+      color: var(--primary);
+      font-size: 0.84rem;
       font-weight: 700;
-      color: #e2e8f0;
-    }
-
-    .offer-feat svg {
-      width: 17px;
-      height: 17px;
-      color: #38bdf8;
-    }
-
-    .offer-price-box {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-radius: 26px;
-      padding: 32px 28px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
+      display: inline-flex;
       align-items: center;
-      gap: 16px;
+      gap: 4px;
+      transition: gap 0.2s ease;
     }
 
-    .price-strike {
-      font-size: 1.1rem;
-      color: #94a3b8;
-      text-decoration: line-through;
+    .service-card:hover .service-link {
+      gap: 7px;
+    }
+
+    /* Special Offer Card */
+    .offer-box {
+      background: linear-gradient(135deg, #087bdc 0%, #0b5db8 100%);
+      color: #ffffff;
+      border-radius: 26px;
+      padding: 32px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      box-shadow: 0 12px 35px rgba(8, 123, 220, 0.25);
+    }
+
+    .offer-box h2 {
+      margin: 0 0 6px;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .offer-box p {
+      margin: 0;
+      opacity: 0.92;
+      font-size: 0.95rem;
+    }
+
+    .offer-price {
+      font-size: 2rem;
+      font-weight: 800;
+      white-space: nowrap;
+      text-align: left;
+    }
+
+    .offer-price small {
+      font-size: 0.9rem;
       font-weight: 600;
     }
 
-    .price-main {
-      font-size: clamp(2.8rem, 4.5vw, 3.6rem);
-      font-weight: 900;
-      line-height: 1;
-      color: #ffffff;
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-    }
-
-    .price-main small {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #38bdf8;
-    }
-
-    .discount-pill {
-      background: #ef4444;
-      color: #ffffff;
-      font-size: 0.8rem;
-      font-weight: 800;
-      padding: 4px 14px;
-      border-radius: var(--radius-full);
-      box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
-    }
-
-    /* ==========================================================================
-       About Doctor Section
-       ========================================================================== */
-    #about {
-      background: linear-gradient(180deg, var(--bg-page) 0%, var(--bg-subtle) 100%);
-    }
-
+    /* About Section */
     .about-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
-      gap: 55px;
+      gap: 42px;
       align-items: center;
     }
 
-    .about-photo-wrapper {
-      position: relative;
-    }
-
     .about-photo {
-      height: 480px;
-      border-radius: 32px;
+      position: relative;
+      height: 380px;
+      border-radius: 26px;
       overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      border: 4px solid #ffffff;
-      background: var(--primary-light);
+      box-shadow: 0 16px 40px rgba(18, 76, 126, 0.12);
     }
 
     .about-photo img {
@@ -1024,783 +526,372 @@
       height: 100%;
       object-fit: cover;
       object-position: 45% 35%;
-      transition: transform 0.5s ease;
     }
 
-    .about-photo:hover img {
-      transform: scale(1.03);
-    }
-
-    .about-exp-badge {
-      position: absolute;
-      bottom: -20px;
-      right: 25px;
-      background: #ffffff;
-      border-radius: var(--radius-xl);
-      padding: 16px 24px;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--border-subtle);
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .exp-num {
-      font-size: 2.2rem;
-      font-weight: 900;
-      color: var(--primary);
-      line-height: 1;
-    }
-
-    .exp-text {
-      font-size: 0.85rem;
+    .about-text h2 {
+      font-size: 2.1rem;
+      color: var(--navy);
+      margin: 8px 0 12px;
       font-weight: 800;
-      color: var(--navy-950);
-      line-height: 1.3;
     }
 
-    .about-content h2 {
-      font-size: clamp(2rem, 3.4vw, 2.8rem);
-      font-weight: 900;
-      color: var(--navy-950);
-      margin-bottom: 16px;
-      line-height: 1.25;
+    .about-text p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 22px;
     }
 
-    .about-lead {
-      font-size: 1.1rem;
-      color: var(--primary-dark);
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .about-desc {
-      color: var(--text-body);
-      font-size: 0.98rem;
-      line-height: 1.85;
-      margin-bottom: 30px;
-    }
-
-    .features-list {
+    .checks-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-bottom: 34px;
+      gap: 12px;
     }
 
-    .feature-item {
-      background: #ffffff;
-      border: 1px solid var(--border-subtle);
-      padding: 14px 18px;
-      border-radius: var(--radius-lg);
-      font-size: 0.9rem;
+    .check-item {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      padding: 11px 15px;
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
       font-weight: 700;
-      color: var(--navy-950);
+      color: var(--navy);
       display: flex;
       align-items: center;
-      gap: 10px;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition-smooth);
+      gap: 8px;
     }
 
-    .feature-item svg {
-      width: 18px;
-      height: 18px;
+    .check-item svg {
+      width: 16px;
+      height: 16px;
       color: var(--primary);
       flex-shrink: 0;
     }
 
-    .feature-item:hover {
-      transform: translateY(-2px);
-      border-color: rgba(2, 132, 199, 0.4);
-      box-shadow: var(--shadow-md);
+    /* Interactive Calculator / Estimator (Distinctive Feature) */
+    .calculator-section {
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      margin-top: 10px;
     }
 
-    .stats-row {
-      display: flex;
-      gap: 28px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(226, 237, 246, 0.9);
+    .calc-header {
+      text-align: center;
+      margin-bottom: 24px;
     }
 
-    .stat-col b {
+    .calc-header h3 {
+      font-size: 1.4rem;
+      color: var(--navy);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .calc-header p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .calc-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .calc-opt {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .calc-opt.selected {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(8, 123, 220, 0.12);
+    }
+
+    .calc-opt b {
       display: block;
-      font-size: 1.8rem;
-      font-weight: 900;
-      color: var(--navy-950);
-      line-height: 1.2;
+      color: var(--navy);
+      font-size: 0.92rem;
     }
 
-    .stat-col span {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      font-weight: 600;
+    .calc-opt span {
+      font-size: 0.78rem;
+      color: var(--muted);
     }
 
-    /* ==========================================================================
-       Gallery Section
-       ========================================================================== */
-    #gallery {
-      background-color: var(--bg-page);
+    .calc-result {
+      background: var(--primary-soft);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
+    .calc-info b {
+      color: var(--navy);
+      font-size: 1.05rem;
+      display: block;
+    }
+
+    .calc-info span {
+      color: var(--primary);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    /* Gallery Grid */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    @media (min-width: 801px) {
+      .gallery-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .gallery-item:nth-child(-n+3) {
+        grid-column: span 2;
+      }
+      .gallery-item:nth-child(n+4) {
+        grid-column: span 3;
+      }
     }
 
     .gallery-item {
       position: relative;
-      border-radius: 22px;
+      height: 220px;
+      border-radius: 20px;
       overflow: hidden;
       cursor: pointer;
-      box-shadow: var(--shadow-sm);
-      background: var(--bg-subtle);
-      transition: var(--transition-smooth);
+      background: #e8f6ff;
     }
-
-    .gallery-item:nth-child(1) { grid-column: span 4; height: 260px; }
-    .gallery-item:nth-child(2) { grid-column: span 4; height: 260px; }
-    .gallery-item:nth-child(3) { grid-column: span 4; height: 260px; }
-    .gallery-item:nth-child(4) { grid-column: span 6; height: 300px; }
-    .gallery-item:nth-child(5) { grid-column: span 6; height: 300px; }
 
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
+      transition: transform 0.4s ease;
     }
 
     .gallery-item:hover img {
-      transform: scale(1.06);
+      transform: scale(1.05);
     }
 
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(9, 30, 54, 0.75) 100%);
-      opacity: 0;
-      transition: opacity 0.35s ease;
-      display: flex;
-      align-items: flex-end;
-      padding: 20px;
-      color: #ffffff;
-    }
-
-    .gallery-item:hover .gallery-overlay {
-      opacity: 1;
-    }
-
-    .gallery-zoom-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.9);
-      color: var(--navy-950);
-      display: grid;
-      place-items: center;
-      margin-inline-end: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .gallery-zoom-btn svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    /* Modal / Lightbox */
-    #lightbox-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(9, 30, 54, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      z-index: 150;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    #lightbox-modal.active {
-      display: flex;
-      opacity: 1;
-    }
-
-    .lightbox-content {
-      position: relative;
-      max-width: 900px;
-      max-height: 85vh;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-      background: #000;
-    }
-
-    .lightbox-content img {
-      max-width: 100%;
-      max-height: 85vh;
-      object-fit: contain;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 24px;
-      right: 24px;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.15);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .lightbox-close:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: scale(1.08);
-    }
-
-    .lightbox-close svg {
-      width: 24px;
-      height: 24px;
-    }
-
-    /* ==========================================================================
-       Location & Working Hours Section
-       ========================================================================== */
-    #location {
-      background-color: var(--bg-subtle);
-    }
-
+    /* Location & Contact */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 18px;
     }
 
     .contact-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-2xl);
-      padding: 38px 34px;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
       box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .contact-items {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-      margin-bottom: 30px;
     }
 
     .contact-item {
       display: flex;
+      gap: 14px;
+      margin: 18px 0;
       align-items: flex-start;
-      gap: 16px;
     }
 
-    .contact-item-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: var(--radius-lg);
-      background: var(--primary-light);
+    .item-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--primary-soft);
       color: var(--primary);
       display: grid;
       place-items: center;
       flex-shrink: 0;
-      border: 1px solid rgba(2, 132, 199, 0.14);
     }
 
-    .contact-item-icon svg {
-      width: 22px;
-      height: 22px;
+    .item-icon svg {
+      width: 20px;
+      height: 20px;
     }
 
-    .contact-item-text b {
+    .item-info b {
       display: block;
-      color: var(--navy-950);
-      font-size: 1rem;
-      font-weight: 800;
+      color: var(--navy);
+      font-size: 0.95rem;
       margin-bottom: 2px;
     }
 
-    .contact-item-text span {
+    .item-info span {
       display: block;
-      color: var(--text-body);
-      font-size: 0.92rem;
-      line-height: 1.6;
+      color: var(--muted);
+      font-size: 0.88rem;
     }
 
-    .contact-item-text a {
-      color: var(--primary);
-      font-weight: 700;
-      direction: ltr;
-      display: inline-block;
-      transition: color 0.2s;
-    }
-
-    .contact-item-text a:hover {
-      color: var(--primary-dark);
-      text-decoration: underline;
-    }
-
-    .location-preview-card {
-      background: linear-gradient(150deg, #edf6fd 0%, #ffffff 100%);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-2xl);
-      padding: 40px 34px;
+    .map-preview {
+      background: linear-gradient(145deg, var(--primary-soft), #ffffff);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 32px 24px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 20px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .radar-icon-box {
-      width: 88px;
-      height: 88px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary) 0%, #0369a1 100%);
-      color: #ffffff;
-      display: grid;
-      place-items: center;
-      position: relative;
-      box-shadow: 0 12px 30px var(--primary-glow);
-    }
-
-    .radar-icon-box svg {
-      width: 40px;
-      height: 40px;
-    }
-
-    .radar-ring {
-      position: absolute;
-      inset: -14px;
-      border-radius: 50%;
-      border: 2px dashed rgba(2, 132, 199, 0.35);
-      animation: rotate-radar 20s linear infinite;
-    }
-
-    @keyframes rotate-radar {
-      to { transform: rotate(360deg); }
-    }
-
-    .hours-pill {
-      background: #ffffff;
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-full);
-      padding: 8px 20px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--navy-950);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .hours-pill svg {
-      width: 16px;
-      height: 16px;
-      color: var(--primary);
-    }
-
-    /* ==========================================================================
-       FAQ Accordion Section
-       ========================================================================== */
-    #faq {
-      background-color: var(--bg-page);
-    }
-
-    .faq-container {
-      max-width: 840px;
-      margin-inline: auto;
-      display: flex;
-      flex-direction: column;
       gap: 14px;
     }
 
-    .faq-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: var(--radius-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: var(--transition-smooth);
-    }
-
-    .faq-item.active {
-      border-color: rgba(2, 132, 199, 0.4);
-      box-shadow: var(--shadow-md);
-    }
-
-    .faq-question {
-      width: 100%;
-      padding: 22px 26px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      text-align: right;
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--navy-950);
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-
-    .faq-item.active .faq-question {
-      color: var(--primary);
-    }
-
-    .faq-icon-chevron {
-      width: 32px;
-      height: 32px;
+    .map-icon {
+      width: 56px;
+      height: 56px;
       border-radius: 50%;
-      background: var(--bg-subtle);
-      color: var(--navy-950);
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-      transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
-    }
-
-    .faq-icon-chevron svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    .faq-item.active .faq-icon-chevron {
-      transform: rotate(180deg);
       background: var(--primary);
       color: #ffffff;
-    }
-
-    .faq-answer {
       display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      place-items: center;
+      box-shadow: 0 8px 20px rgba(8, 123, 220, 0.25);
     }
 
-    .faq-item.active .faq-answer {
-      grid-template-rows: 1fr;
+    .map-icon svg {
+      width: 26px;
+      height: 26px;
     }
 
-    .faq-answer-inner {
-      overflow: hidden;
-      padding: 0 26px;
-      color: var(--text-body);
-      font-size: 0.95rem;
-      line-height: 1.8;
-      border-top: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-
-    .faq-item.active .faq-answer-inner {
-      padding-bottom: 22px;
-      padding-top: 8px;
-      border-top-color: var(--border-subtle);
-    }
-
-    /* ==========================================================================
-       Booking Callout Section
-       ========================================================================== */
-    .cta-banner-section {
-      padding: 40px 0 80px;
-    }
-
-    .cta-banner {
-      background: linear-gradient(135deg, var(--primary) 0%, #0369a1 100%);
-      color: #ffffff;
-      border-radius: 34px;
-      padding: clamp(38px, 5vw, 60px);
-      text-align: center;
-      display: flex;
-      flex-direction: column;
+    /* Lightbox Modal */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(16, 44, 79, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      display: none;
       align-items: center;
-      gap: 24px;
-      box-shadow: 0 25px 60px -15px rgba(2, 132, 199, 0.35);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-banner::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .cta-banner h2 {
-      font-size: clamp(2rem, 3.8vw, 3rem);
-      font-weight: 900;
-      color: #ffffff;
-      line-height: 1.25;
-      max-width: 650px;
-    }
-
-    .cta-banner p {
-      color: #e0f2fe;
-      font-size: 1.1rem;
-      max-width: 580px;
-      line-height: 1.8;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
       justify-content: center;
+      padding: 20px;
     }
 
-    /* ==========================================================================
-       Footer
-       ========================================================================== */
-    footer {
-      background: var(--navy-950);
-      color: #ffffff;
-      padding: 60px 0 35px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .footer-top {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 40px;
-      padding-bottom: 45px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      margin-bottom: 30px;
-    }
-
-    .footer-brand b {
-      font-size: 1.25rem;
-      font-weight: 900;
-      color: #ffffff;
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .footer-brand p {
-      color: #94a3b8;
-      font-size: 0.9rem;
-      line-height: 1.7;
-      max-width: 340px;
-    }
-
-    .footer-title {
-      font-size: 1rem;
-      font-weight: 800;
-      color: #38bdf8;
-      margin-bottom: 16px;
-    }
-
-    .footer-links {
+    #lightbox.active {
       display: flex;
-      flex-direction: column;
-      gap: 10px;
     }
 
-    .footer-links a {
-      color: #cbd5e1;
-      font-size: 0.88rem;
-      font-weight: 600;
-      transition: color 0.2s, transform 0.2s;
-      display: inline-block;
+    #lightbox img {
+      max-width: 900px;
+      max-height: 85vh;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     }
 
-    .footer-links a:hover {
-      color: #38bdf8;
-      transform: translateX(-4px);
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: #ffffff;
+      padding: 32px 0;
+      margin-top: 40px;
     }
 
-    .footer-bottom {
+    footer p {
+      color: #b8cbe0;
+      font-size: 0.84rem;
+    }
+
+    .foot-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 16px;
     }
 
-    .footer-bottom p {
-      color: #94a3b8;
-      font-size: 0.84rem;
-    }
-
-    .back-to-top {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: #38bdf8;
-      font-size: 0.84rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: color 0.2s, transform 0.2s;
-    }
-
-    .back-to-top:hover {
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-
-    .back-to-top svg {
-      width: 16px;
-      height: 16px;
-    }
-
-    /* ==========================================================================
-       Mobile Fixed Floating Bottom Bar
-       ========================================================================== */
-    .mobile-bottom-bar {
+    /* Mobile Sticky Bar */
+    .mobile-bar {
       display: none;
       position: fixed;
-      bottom: 14px;
-      left: 14px;
-      right: 14px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      background: #ffffff;
       padding: 8px;
-      border-radius: var(--radius-xl);
-      box-shadow: 0 12px 35px rgba(9, 30, 54, 0.22);
-      border: 1px solid rgba(226, 237, 246, 0.9);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       z-index: 80;
       gap: 8px;
     }
 
-    .mobile-bottom-bar a {
+    .mobile-bar a {
       flex: 1;
-      padding: 12px;
-      font-size: 0.88rem;
     }
 
-    /* ==========================================================================
-       Animations & Reveal Utilities
-       ========================================================================== */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: opacity, transform;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .delay-1 { transition-delay: 0.1s; }
-    .delay-2 { transition-delay: 0.2s; }
-    .delay-3 { transition-delay: 0.3s; }
-    .delay-4 { transition-delay: 0.4s; }
-
-    /* ==========================================================================
-       Responsive Breakpoints
-       ========================================================================== */
-    @media (max-width: 992px) {
+    /* Responsive Queries */
+    @media (max-width: 800px) {
       .nav-links { display: none; }
-      .menu-toggle { display: inline-flex; }
-      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-      .hero-visual { order: -1; max-width: 500px; margin-inline: auto; width: 100%; }
-      .photo-wrapper { height: 460px; }
-      .about-grid { grid-template-columns: 1fr; gap: 45px; }
-      .about-photo-wrapper { max-width: 480px; margin-inline: auto; width: 100%; }
-      .about-photo { height: 400px; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .offer-card { grid-template-columns: 1fr; text-align: center; }
-      .offer-card p { margin-inline: auto; }
-      .offer-features { justify-content: center; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .gallery-item:nth-child(1),
-      .gallery-item:nth-child(2),
-      .gallery-item:nth-child(3) { grid-column: span 6; height: 230px; }
-      .gallery-item:nth-child(4),
-      .gallery-item:nth-child(5) { grid-column: span 6; height: 250px; }
-      .footer-top { grid-template-columns: 1fr 1fr; }
+      .menu-btn { display: flex; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .photo-card { height: 420px; }
+      .services-cards { grid-template-columns: 1fr 1fr; }
+      .calc-options { grid-template-columns: 1fr; }
+      .offer-box { flex-direction: column; text-align: center; }
+      .offer-price { text-align: center; }
     }
 
-    @media (max-width: 640px) {
-      nav { height: 68px; }
-      .mobile-menu { top: 68px; }
-      .hero { padding: 45px 0 35px; }
-      .photo-wrapper { height: 380px; }
-      .float-card-rating { left: 10px; top: 14px; padding: 8px 12px; }
-      .float-card-doctor { bottom: 14px; right: 14px; padding: 10px 14px; }
-      .services-grid { grid-template-columns: 1fr; }
-      .features-list { grid-template-columns: 1fr; }
-      .hero-trust { grid-template-columns: 1fr; gap: 14px; }
-      .stats-row { flex-wrap: wrap; gap: 18px; }
-      .gallery-item:nth-child(n) { grid-column: span 12; height: 220px; }
-      .footer-top { grid-template-columns: 1fr; gap: 30px; }
-      .mobile-bottom-bar { display: flex; }
-      body { padding-bottom: 74px; }
+    @media (max-width: 540px) {
+      nav { height: 66px; }
+      .hero { padding-top: 35px; }
+      .hero-content h1 { font-size: 2.2rem; }
+      .services-cards, .checks-grid { grid-template-columns: 1fr; }
+      .photo-card { height: 360px; }
+      .about-photo { height: 320px; }
+      .foot-content { flex-direction: column; text-align: center; }
+      .mobile-bar { display: flex; }
+      body { padding-bottom: 70px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Scroll Progress Indicator -->
-  <div id="scroll-progress"></div>
-
-  <!-- Header -->
-  <header id="main-header">
+  <!-- Navigation -->
+  <header>
     <div class="container">
       <nav>
         <a class="brand" href="#home">
-          <div class="brand-avatar">
-            <img src="images/doctor-logo.jpg" alt="دكتور أحمد الشاعر">
-          </div>
-          <div class="brand-info">
-            <small>عيادة طب وتجميل الأسنان</small>
+          <img src="images/doctor-logo.jpg" alt="د/ أحمد الشاعر">
+          <div>
+            <small>عيادة أسنان</small>
             <b>د/ أحمد الشاعر</b>
           </div>
         </a>
 
         <div class="nav-links">
-          <a class="nav-link" href="#home">الرئيسية</a>
-          <a class="nav-link" href="#services">خدماتنا</a>
-          <a class="nav-link" href="#offer">العرض الخاص</a>
-          <a class="nav-link" href="#about">عن الطبيب</a>
-          <a class="nav-link" href="#gallery">معرض العيادة</a>
-          <a class="nav-link" href="#location">الموقع</a>
-          <a class="nav-link" href="#faq">الأسئلة الشائعة</a>
+          <a href="#services">خدماتنا</a>
+          <a href="#offer">العرض الخاص</a>
+          <a href="#about">عن الطبيب</a>
+          <a href="#calculator">تأكيد الموعد</a>
+          <a href="#gallery">الصور</a>
+          <a href="#location">الموقع</a>
         </div>
 
-        <div class="nav-actions">
-          <a class="btn btn-primary" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%83%D8%B4%D9%81" target="_blank" rel="noopener">
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <a class="btn btn-primary" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
             </svg>
             احجز موعدك
           </a>
 
-          <button class="menu-toggle" id="menu-toggle" aria-label="القائمة">
+          <button class="menu-btn" id="menu-btn" aria-label="القائمة">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -1811,136 +902,81 @@
       </nav>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#home">الرئيسية</a>
-      <a href="#services">خدماتنا الطبية</a>
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#services">خدماتنا</a>
       <a href="#offer">العرض الخاص</a>
-      <a href="#about">عن دكتور أحمد الشاعر</a>
-      <a href="#gallery">معرض العيادة</a>
-      <a href="#location">العنوان والموقع</a>
-      <a href="#faq">الأسئلة الشائعة</a>
-      <a class="btn btn-primary" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">احجز موعدك عبر واتساب</a>
+      <a href="#about">عن الطبيب</a>
+      <a href="#calculator">تأكيد الموعد</a>
+      <a href="#gallery">الصور</a>
+      <a href="#location">الموقع</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <main id="home">
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-glow-1"></div>
-      <div class="hero-glow-2"></div>
-      
       <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <div class="badge-live">
-            <span class="pulse-dot"></span>
-            مواعيد اليوم متاحة للحجز المسبق
-          </div>
+        <div class="hero-content">
+          <span class="eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            ابتسامتك... مسؤوليتنا
+          </span>
 
           <h1>
             عيادة أسنان<br>
-            <span class="gradient-text">د/ أحمد الشاعر</span>
+            <span>د/ أحمد الشاعر</span>
           </h1>
 
-          <p class="hero-desc">
-            رعاية طبية وتجميلية متكاملة لأسنانك في تجربة مريحة وبدون ألم، مع الالتزام بأعلى معايير التعقيم العالمية في قلب مدينة نصر.
+          <p>
+            رعاية متكاملة لأسنانك في تجربة مريحة، مع سهولة التواصل والوصول للعيادة وحجز الموعد بمدينة نصر.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20150%20%D8%AC%D9%86%D9%8A%D9%87" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              احجز كشفك الآن (عرض 150 ج)
+            <a class="btn btn-primary" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              احجز موعدك الآن
             </a>
-
-            <a class="btn btn-secondary" href="https://wa.me/201029629627" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-              </svg>
+            <a class="btn btn-ghost" href="https://wa.me/201029629627" target="_blank" rel="noopener">
               تواصل عبر واتساب
             </a>
           </div>
 
           <div class="hero-trust">
             <div class="trust-item">
-              <div class="trust-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <path d="m9 12 2 2 4-4"></path>
-                </svg>
-              </div>
-              <div class="trust-text">
-                <b>تعقيم فائق 100%</b>
-                <span>أحدث أجهزة التعقيم الرقمي</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <div>
+                <b>خدمات أسنان</b>
+                <span>رعاية متكاملة</span>
               </div>
             </div>
 
             <div class="trust-item">
-              <div class="trust-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                </svg>
-              </div>
-              <div class="trust-text">
-                <b>رعاية بدون ألم</b>
-                <span>أحدث تقنيات التخدير الموضعي</span>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="trust-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <div class="trust-text">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div>
                 <b>مدينة نصر</b>
-                <span>ميدان الساعة، موقع واضح وسهل</span>
+                <span>موقع واضح</span>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <div>
+                <b>تواصل مباشر</b>
+                <span>هاتف وواتساب</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual reveal delay-1">
-          <div class="photo-wrapper">
-            <img src="images/doctor-hero.jpg" alt="دكتور أحمد الشاعر">
-            <div class="photo-backdrop-shape"></div>
+        <div class="photo-container">
+          <div class="photo-card">
+            <span class="demo-tag">صور تجريبية</span>
+            <img src="images/doctor-hero.jpg" alt="د/ أحمد الشاعر">
           </div>
-
-          <!-- Rating Badge -->
-          <div class="float-card-rating">
-            <div class="stars-group">
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            </div>
-            <div>
-              <span class="rating-number">4.9 / 5.0</span>
-              <span class="rating-sub">تقييم المرضى المعتمد</span>
-            </div>
-          </div>
-
-          <!-- Doctor Tag Card -->
-          <div class="float-card-doctor">
-            <div class="icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z"></path>
-                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                <line x1="12" y1="19" x2="12" y2="22"></line>
-              </svg>
-            </div>
-            <div>
-              <b>د/ أحمد الشاعر</b>
-              <span>أخصائي طب وجراحة الأسنان</span>
-            </div>
+          <div class="photo-badge">
+            <b>د/ أحمد الشاعر</b>
+            <span>عيادة أسنان - القاهرة</span>
           </div>
         </div>
       </div>
@@ -1949,201 +985,141 @@
     <!-- Services Section -->
     <section id="services">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div>
-            <span class="badge-eyebrow">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              خدماتنا الطبية
-            </span>
-            <h2>كل ما تحتاجه لصحة وجمال ابتسامتك</h2>
+            <span class="eyebrow">خدماتنا</span>
+            <h2>كل ما تحتاجه لابتسامتك</h2>
           </div>
-          <p>
-            نقدم مجموعة متكاملة من الخدمات العلاجية والتجميلية باستخدام أحدث الأجهزة والمواد الطبية لضمان أفضل نتيجة تدوم طويلاً.
-          </p>
+          <p>قسم خدمات قابل للتعديل حسب الخدمات التي يعتمدها الطبيب رسميًا.</p>
         </div>
 
-        <div class="services-grid">
-          <!-- Service 1: Checkup -->
-          <div class="service-card reveal">
+        <div class="services-cards">
+          <!-- 1. Checkup -->
+          <div class="service-card">
             <div>
-              <div class="service-icon-wrap">
-                <!-- Custom Dental Examination SVG -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <div class="service-icon">
+                <!-- Tooth icon SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 3c-4.5 0-7 3.5-7 7.5 0 3 1.5 6 3 9.5 1 2 2.5 2 4 2s3 0 4-2c1.5-3.5 3-6.5 3-9.5 0-4-2.5-7.5-7-7.5z"></path>
-                  <path d="M9 10h6"></path>
-                  <path d="M12 7v6"></path>
                 </svg>
               </div>
-              <span class="service-tag">فحص وتشخيص دقيق</span>
-              <h3 style="margin-top: 10px;">كشف واستشارة الأسنان</h3>
-              <p>فحص شامل لصحة الأسنان واللثة باستخدام كاميرات التصوير الفموي لتحديد خطة علاج دقيقة وواضحة تناسب حالتك.</p>
+              <h3>كشف الأسنان</h3>
+              <p>فحص وتقييم احتياجات الأسنان والخطوة المناسبة للحالة.</p>
             </div>
-            <div class="service-footer">
-              <a class="service-action-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A9%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D9%83%D8%B4%D9%81%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86">
-                احجز استشارتك
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </a>
-            </div>
+            <a class="service-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D9%83%D8%B4%D9%81%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86">
+              استفسر عن الكشف
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </a>
           </div>
 
-          <!-- Service 2: Cosmetic & Whitening -->
-          <div class="service-card reveal delay-1">
+          <!-- 2. Cosmetic -->
+          <div class="service-card">
             <div>
-              <div class="service-icon-wrap">
-                <!-- Custom Cosmetic Veneer Sparkle SVG -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <div class="service-icon">
+                <!-- Cosmetic / Sparkle SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3z"></path>
                 </svg>
               </div>
-              <span class="service-tag">ابتسامة هوليوود</span>
-              <h3 style="margin-top: 10px;">تجميل وتبييض الأسنان</h3>
-              <p>عدسات الفينير، تبييض الأسنان الاحترافي بجلسة واحدة، وتعديل شكل الأسنان للحصول على ابتسامة مشرقة وطبيعية المظهر.</p>
+              <h3>تجميل الأسنان</h3>
+              <p>خيارات لتحسين مظهر الابتسامة وفق احتياج كل حالة.</p>
             </div>
-            <div class="service-footer">
-              <a class="service-action-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A9%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%AC%D9%85%D9%8A%D9%84%20%D9%88%D8%AA%D8%A8%D9%8A%D9%8A%D8%B6%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86">
-                استفسر عن التجميل
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </a>
-            </div>
+            <a class="service-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%AC%D9%85%D9%8A%D9%84%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86">
+              استفسر عن التجميل
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </a>
           </div>
 
-          <!-- Service 3: Cleaning & Scaling -->
-          <div class="service-card reveal delay-2">
+          <!-- 3. Cleaning -->
+          <div class="service-card">
             <div>
-              <div class="service-icon-wrap">
-                <!-- Custom Ultrasonic Hygiene / Scaler SVG -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <div class="service-icon">
+                <!-- Hygiene / Brush SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 2v20"></path>
                   <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                  <circle cx="12" cy="3" r="1"></circle>
                 </svg>
               </div>
-              <span class="service-tag">عناية دورية باللثة</span>
-              <h3 style="margin-top: 10px;">تنظيف وتلميع الأسنان</h3>
-              <p>إزالة الرواسب الجيرية وتصبغات الشاي والتدخين بجهاز الموجات فوق الصوتية بدون ألم، مع حماية اللثة من الالتهابات.</p>
+              <h3>تنظيف الأسنان</h3>
+              <p>العناية بنظافة الأسنان والحفاظ على صحة الفم.</p>
             </div>
-            <div class="service-footer">
-              <a class="service-action-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A9%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D9%88%D8%AA%D9%84%D9%85%D9%8A%D8%B9%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86">
-                احجز جلسة التنظيف
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </a>
-            </div>
+            <a class="service-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86">
+              استفسر عن التنظيف
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </a>
           </div>
 
-          <!-- Service 4: Crowns & Bridges -->
-          <div class="service-card reveal">
+          <!-- 4. Crowns -->
+          <div class="service-card">
             <div>
-              <div class="service-icon-wrap">
-                <!-- Custom Crown / Implant SVG -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <div class="service-icon">
+                <!-- Crown / Structure SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M3 8l3.5 10h11L21 8l-4.5 4L12 4 7.5 12z"></path>
                 </svg>
               </div>
-              <span class="service-tag">تعويض الأسنان المفقودة</span>
-              <h3 style="margin-top: 10px;">تركيبات الزيركون والبورسلين</h3>
-              <p>حلول تعويضية ثابتة ومتحركة باستخدام أفضل خامات الزيركون وإيماكس لاستعادة قوة المضغ والشكل الطبيعي للأسنان.</p>
+              <h3>تركيبات الأسنان</h3>
+              <p>حلول تعويضية مناسبة حسب تقييم الطبيب.</p>
             </div>
-            <div class="service-footer">
-              <a class="service-action-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A9%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86">
-                استفسر عن التركيبات
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </a>
-            </div>
+            <a class="service-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86">
+              استفسر عن التركيبات
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </a>
           </div>
 
-          <!-- Service 5: Endodontics / Root Canal -->
-          <div class="service-card reveal delay-1">
+          <!-- 5. Root Canal -->
+          <div class="service-card">
             <div>
-              <div class="service-icon-wrap">
-                <!-- Custom Root Canal & Health Cross SVG -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                  <path d="M12 8v8"></path>
-                  <path d="M8 12h8"></path>
+              <div class="service-icon">
+                <!-- Root Canal / Health Cross SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+                  <line x1="12" y1="8" x2="12" y2="16"></line>
+                  <line x1="8" y1="12" x2="16" y2="12"></line>
                 </svg>
               </div>
-              <span class="service-tag">علاج آلام الأسنان</span>
-              <h3 style="margin-top: 10px;">علاج الجذور وحشو العصب</h3>
-              <p>علاج وحشو قنوات العصب بأحدث أجهزة الروتاري الدقيقة لإنهاء الألم في جلسات محددة وسريعة مع حماية السن من الكسر.</p>
+              <h3>علاج العصب</h3>
+              <p>تقييم الحالات وخطة العلاج المناسبة.</p>
             </div>
-            <div class="service-footer">
-              <a class="service-action-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A9%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%B9%D9%84%D8%A7%D8%AC%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8">
-                استفسر عن علاج العصب
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </a>
-            </div>
+            <a class="service-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%B9%D9%84%D8%A7%D8%AC%20%D8%A7%D9%84%D8%B9%D8%B5%D8%A8">
+              استفسر عن علاج العصب
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </a>
           </div>
 
-          <!-- Service 6: Orthodontics -->
-          <div class="service-card reveal delay-2">
+          <!-- 6. Orthodontics -->
+          <div class="service-card">
             <div>
-              <div class="service-icon-wrap">
-                <!-- Custom Orthodontics Alignment SVG -->
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="6" cy="12" r="3"></circle>
-                  <circle cx="18" cy="12" r="3"></circle>
-                  <line x1="9" y1="12" x2="15" y2="12"></line>
-                  <path d="M6 7v2"></path>
-                  <path d="M18 7v2"></path>
-                  <path d="M6 15v2"></path>
-                  <path d="M18 15v2"></path>
+              <div class="service-icon">
+                <!-- Orthodontics / Alignment SVG -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="7" cy="12" r="3"></circle>
+                  <circle cx="17" cy="12" r="3"></circle>
+                  <line x1="10" y1="12" x2="14" y2="12"></line>
                 </svg>
               </div>
-              <span class="service-tag">إطباق وتناسق مثالي</span>
-              <h3 style="margin-top: 10px;">تقويم وتعديل الأسنان</h3>
-              <p>استشارات وحلول تقويم الأسنان المعدني والشفاف لتعديل اعوجاج الأسنان وتحسين مظهر الفك والابتسامة لكل الأعمار.</p>
+              <h3>تقويم الأسنان</h3>
+              <p>استشارة وتقييم احتياجات تقويم الأسنان.</p>
             </div>
-            <div class="service-footer">
-              <a class="service-action-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A9%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%82%D9%88%D9%8A%D9%85%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86">
-                استشارة التقويم
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </a>
-            </div>
+            <a class="service-link" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20%D8%AA%D9%82%D9%88%D9%8A%D9%85%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86">
+              استفسر عن التقويم
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Special Offer Section -->
-    <section id="offer" class="offer-section">
+    <section id="offer">
       <div class="container">
-        <div class="offer-card reveal">
+        <div class="offer-box">
           <div>
-            <div class="offer-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-              عرض خاص لفترة محدودة
-            </div>
-            <h2>الكشف الشامل 150 جنيه فقط</h2>
-            <p>
-              احصل على فحص دقيق لأسنانك وتحديد خطة العلاج المناسبة مع خصم 50% على الكشف، بالإضافة إلى خصم 30% على جلسات التنظيف وباقي الخدمات الطبية.
-            </p>
-            <div class="offer-features">
-              <div class="offer-feat">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                فحص كامل بالفيديو الفموي
-              </div>
-              <div class="offer-feat">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                خطة علاجية مخصصة ومفصلة
-              </div>
-              <div class="offer-feat">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                خصم 30% إضافي على الخدمات
-              </div>
-            </div>
+            <h2>عرض خاص</h2>
+            <p>الكشف 150 جنيه بدلًا من 300 جنيه، وخصم 30% على الخدمات المذكورة.</p>
           </div>
-
-          <div class="offer-price-box">
-            <span class="discount-pill">وفر 50% الآن</span>
-            <div class="price-strike">300 جنيه</div>
-            <div class="price-main">
-              150 <small>جنيه مصري</small>
-            </div>
-            <a class="btn btn-primary" style="width: 100%;" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%A7%D9%84%D9%83%D8%B4%D9%81%20150%20%D8%AC%D9%86%D9%8A%D9%87" target="_blank" rel="noopener">
-              احجز العرض عبر واتساب
-            </a>
+          <div class="offer-price">
+            150 <small>جنيه</small>
           </div>
         </div>
       </div>
@@ -2152,61 +1128,74 @@
     <!-- About Doctor Section -->
     <section id="about">
       <div class="container about-grid">
-        <div class="about-photo-wrapper reveal">
-          <div class="about-photo">
-            <img src="images/doctor-about.jpg" alt="دكتور أحمد الشاعر">
-          </div>
-          <div class="about-exp-badge">
-            <div class="exp-num">+10</div>
-            <div class="exp-text">
-              سنوات من الخبرة<br>في طب الأسنان
+        <div class="about-photo">
+          <span class="demo-tag">صور تجريبية</span>
+          <img src="images/doctor-about.jpg" alt="د/ أحمد الشاعر">
+        </div>
+
+        <div class="about-text">
+          <span class="eyebrow">عن الطبيب</span>
+          <h2>د/ أحمد الشاعر</h2>
+          <p>
+            قسم تعريفي مختصر بالطبيب والعيادة. يمكن استبدال هذا النص بالمعلومات المهنية الرسمية التي يعتمدها الطبيب قبل نشر الموقع.
+          </p>
+
+          <div class="checks-grid">
+            <div class="check-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              موقع واضح للعيادة
+            </div>
+            <div class="check-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              تواصل مباشر
+            </div>
+            <div class="check-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              خدمات في مكان واحد
+            </div>
+            <div class="check-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              حجز موعد بسهولة
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="about-content reveal delay-1">
-          <span class="badge-eyebrow">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            عن الطبيب
-          </span>
-          <h2>د/ أحمد الشاعر</h2>
-          <p class="about-lead">أخصائي طب وجراحة وتجميل الأسنان</p>
-          <p class="about-desc">
-            نحرص في عيادتنا على تقديم تجربة علاجية فريدة تجمع بين الدقة الطبية العالية وأقصى درجات الراحة للمريض. نعتمد أحدث بروتوكولات التعقيم والأجهزة الحديثة للوصول إلى نتائج وظيفية وجمالية تدوم لسنوات طويلة مع مراعاة الحالة الفردية لكل مريض.
-          </p>
+    <!-- Distinctive Interactive Calculator Section (حاجة مميزة) -->
+    <section id="calculator">
+      <div class="container">
+        <div class="calculator-section">
+          <div class="calc-header">
+            <span class="eyebrow">أداة حجز الموعد والعرض</span>
+            <h3>اختر الخدمة وتأكد من تفاصيل العرض</h3>
+            <p>اختر نوع الخدمة التي ترغب في استشارتها لحساب قيمة الكشف وتأكيد الموعد مباشرة عبر واتساب.</p>
+          </div>
 
-          <div class="features-list">
-            <div class="feature-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              موقع متميز وهادئ بمدينة نصر
+          <div class="calc-options" id="calc-options">
+            <div class="calc-opt selected" onclick="selectService(this, 'كشف واستشارة الأسنان', '150 جنيه بدلاً من 300 جنيه')">
+              <b>كشف واستشارة الأسنان</b>
+              <span>150 جنيه (خصم 50%)</span>
             </div>
-            <div class="feature-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              تواصل مباشر مع الطبيب
+            <div class="calc-opt" onclick="selectService(this, 'تنظيف وتلميع الأسنان', 'كشف 150ج + خصم 30% على التنظيف')">
+              <b>تنظيف وتلميع الأسنان</b>
+              <span>خصم 30% على الخدمة</span>
             </div>
-            <div class="feature-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              كافة الخدمات بمكان واحد
-            </div>
-            <div class="feature-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              سهولة حجز المواعيد إلكترونياً
+            <div class="calc-opt" onclick="selectService(this, 'تجميل وتركيبات الأسنان', 'كشف 150ج + خصم 30% على التركيبات')">
+              <b>تجميل وتركيبات الأسنان</b>
+              <span>خصم 30% على الخدمة</span>
             </div>
           </div>
 
-          <div class="stats-row">
-            <div class="stat-col">
-              <b>+5,000</b>
-              <span>حالة ناجحة ومكتملة</span>
+          <div class="calc-result">
+            <div class="calc-info">
+              <b id="selected-service-title">الخدمة المختارة: كشف واستشارة الأسنان</b>
+              <span id="selected-service-desc">العرض: 150 جنيه بدلاً من 300 جنيه (خصم 50%)</span>
             </div>
-            <div class="stat-col">
-              <b>100%</b>
-              <span>التزام بمعايير التعقيم</span>
-            </div>
-            <div class="stat-col">
-              <b>4.9 / 5</b>
-              <span>متوسط رضا المرضى</span>
-            </div>
+            <a class="btn btn-primary" id="calc-wa-btn" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D9%83%D8%B4%D9%81%20%D9%88%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              تأكيد حجز هذا العرض
+            </a>
           </div>
         </div>
       </div>
@@ -2215,440 +1204,191 @@
     <!-- Clinic Gallery Section -->
     <section id="gallery">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div>
-            <span class="badge-eyebrow">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-              معرض الصور
-            </span>
+            <span class="eyebrow">معرض الصور</span>
             <h2>جولة داخل العيادة</h2>
           </div>
-          <p>تعرف على بيئة العيادة وأحدث التجهيزات الطبية المصممة خصيصاً لراحتك وسلامتك أثناء كل زيارة.</p>
         </div>
 
         <div class="gallery-grid">
-          <div class="gallery-item reveal" onclick="openLightbox('images/gallery-1.jpg')">
-            <img src="images/gallery-1.jpg" alt="تجهيزات العيادة الحديثة">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-              </div>
-              <span>تكبير الصورة</span>
-            </div>
+          <div class="gallery-item" onclick="openLightbox('images/gallery-1.jpg')">
+            <span class="demo-tag">صور تجريبية</span>
+            <img src="images/gallery-1.jpg" alt="صورة داخل العيادة 1">
           </div>
-
-          <div class="gallery-item reveal delay-1" onclick="openLightbox('images/gallery-2.jpg')">
-            <img src="images/gallery-2.jpg" alt="أجهزة الأسنان الطبية المتطورة">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-              </div>
-              <span>تكبير الصورة</span>
-            </div>
+          <div class="gallery-item" onclick="openLightbox('images/gallery-2.jpg')">
+            <span class="demo-tag">صور تجريبية</span>
+            <img src="images/gallery-2.jpg" alt="صورة داخل العيادة 2">
           </div>
-
-          <div class="gallery-item reveal delay-2" onclick="openLightbox('images/gallery-3.jpg')">
-            <img src="images/gallery-3.jpg" alt="وحدة علاج الأسنان المريحة">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-              </div>
-              <span>تكبير الصورة</span>
-            </div>
+          <div class="gallery-item" onclick="openLightbox('images/gallery-3.jpg')">
+            <span class="demo-tag">صور تجريبية</span>
+            <img src="images/gallery-3.jpg" alt="صورة داخل العيادة 3">
           </div>
-
-          <div class="gallery-item reveal" onclick="openLightbox('images/gallery-4.jpg')">
-            <img src="images/gallery-4.jpg" alt="غرفة الكشف والاستشارة">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-              </div>
-              <span>تكبير الصورة</span>
-            </div>
+          <div class="gallery-item" onclick="openLightbox('images/gallery-4.jpg')">
+            <span class="demo-tag">صور تجريبية</span>
+            <img src="images/gallery-4.jpg" alt="صورة داخل العيادة 4">
           </div>
-
-          <div class="gallery-item reveal delay-1" onclick="openLightbox('images/gallery-5.jpg')">
-            <img src="images/gallery-5.jpg" alt="أعلى معايير التعقيم والأمان">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-              </div>
-              <span>تكبير الصورة</span>
-            </div>
+          <div class="gallery-item" onclick="openLightbox('images/gallery-5.jpg')">
+            <span class="demo-tag">صور تجريبية</span>
+            <img src="images/gallery-5.jpg" alt="صورة داخل العيادة 5">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox-modal" onclick="closeLightbox(event)">
-      <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="إغلاق">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-      <div class="lightbox-content">
-        <img id="lightbox-img" src="" alt="صورة مكبرة">
-      </div>
-    </div>
-
-    <!-- Location & Working Hours Section -->
+    <!-- Location & Map Section -->
     <section id="location">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div>
-            <span class="badge-eyebrow">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              موقع العيادة
-            </span>
+            <span class="eyebrow">موقعنا</span>
             <h2>زورنا في مدينة نصر</h2>
           </div>
-          <p>موقع مميز يسهل الوصول إليه من مختلف مناطق القاهرة عبر طريق النصر وميدان الساعة.</p>
+          <p>يمكن ربط الخريطة بالموقع الرسمي الدقيق بعد تأكيده مع العيادة.</p>
         </div>
 
         <div class="contact-grid">
-          <div class="contact-card reveal">
-            <div class="contact-items">
-              <div class="contact-item">
-                <div class="contact-item-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                </div>
-                <div class="contact-item-text">
-                  <b>العنوان بالتفصيل</b>
-                  <span>9 عمارات أول مايو، ميدان الساعة، مدينة نصر، القاهرة</span>
-                  <span style="color: var(--text-muted); font-size: 0.85rem;">طريق النصر — بجوار الجامعة العمالية</span>
-                </div>
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               </div>
-
-              <div class="contact-item">
-                <div class="contact-item-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                  </svg>
-                </div>
-                <div class="contact-item-text">
-                  <b>أرقام الهاتف المباشرة</b>
-                  <div>
-                    <a href="tel:01029629627">01029629627</a> — <a href="tel:01111231290">01111231290</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="contact-item-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                </div>
-                <div class="contact-item-text">
-                  <b>مواعيد العمل الرسمية</b>
-                  <span>السبت إلى الخميس: 2:00 ظهراً — 10:00 مساءً</span>
-                  <span style="color: var(--text-muted); font-size: 0.82rem;">الجمعة: إجازة أسبوعية (للطوارئ مسبقاً)</span>
-                </div>
+              <div class="item-info">
+                <b>العنوان</b>
+                <span>9 عمارات أول مايو، ميدان الساعة، مدينة نصر، القاهرة</span>
               </div>
             </div>
 
-            <a class="btn btn-whatsapp" href="https://wa.me/201029629627" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-              </svg>
-              محادثة سريعة عبر واتساب
+            <div class="contact-item">
+              <div class="item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div class="item-info">
+                <b>الهاتف</b>
+                <span>01029629627 — 01111231290</span>
+              </div>
+            </div>
+
+            <a class="btn btn-primary" style="width: 100%; margin-top: 10px;" href="https://wa.me/201029629627" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              ابدأ محادثة واتساب
             </a>
           </div>
 
-          <div class="location-preview-card reveal delay-1">
-            <div class="radar-icon-box">
-              <div class="radar-ring"></div>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-              </svg>
+          <div class="map-preview">
+            <div class="map-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>
-
             <div>
-              <h3 style="font-size: 1.35rem; color: var(--navy-950); font-weight: 800; margin-bottom: 6px;">ميدان الساعة — مدينة نصر</h3>
-              <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 380px;">موقع حيوي وسهل الوصول بالمواصلات أو بالسيارة مع أماكن انتظار متاحة.</p>
+              <h3 style="color: var(--navy); margin-bottom: 4px; font-size: 1.25rem;">ميدان الساعة - مدينة نصر</h3>
+              <p style="color: var(--muted); font-size: 0.9rem;">طريق النصر بجوار الجامعة العمالية</p>
             </div>
-
-            <div class="hours-pill">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              الاستقبال متاح اليوم للحجز
-            </div>
-
-            <a class="btn btn-secondary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%D9%85%D9%8A%D8%AF%D8%A7%D9%86+%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9+%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D9%86%D8%B5%D8%B1+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
-              فتح الموقع المباشر على خرائط جوجل
+            <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%D9%85%D9%8A%D8%AF%D8%A7%D9%86+%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9+%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D9%86%D8%B5%D8%B1+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9">
+              فتح الموقع على الخريطة
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq">
+    <!-- Final Booking Callout -->
+    <section id="booking" style="padding-top: 15px;">
       <div class="container">
-        <div class="section-head center reveal">
-          <span class="badge-eyebrow">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-            الأسئلة الشائعة
-          </span>
-          <h2>إجابات على أهم تساؤلاتك</h2>
-          <p>جمعنا لك أهم الأسئلة التي يطرحها مراجعونا لتوفير وقتك وتوضيح كل التفاصيل.</p>
-        </div>
-
-        <div class="faq-container">
-          <div class="faq-item reveal">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              <span>هل يتطلب الكشف حجزاً مسبقاً؟</span>
-              <div class="faq-icon-chevron">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                نعم، نفضل دائماً الحجز المسبق لضمان عدم الانتظار وتخصيص الوقت الكافي لكل حالة للتشخيص ومناقشة الخطة العلاجية بدقة وراحة تامة.
-              </div>
-            </div>
+        <div class="offer-box">
+          <div>
+            <h2>جاهز تبدأ تهتم بابتسامتك؟</h2>
+            <p>تواصل مع العيادة وحدد الموعد المناسب.</p>
           </div>
-
-          <div class="faq-item reveal delay-1">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              <span>كيف يمكنني الاستفادة من عرض الكشف (150 جنيه)؟</span>
-              <div class="faq-icon-chevron">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                بمجرد تواصلك معنا وحجز موعدك عبر واتساب أو الهاتف، يتم تفعيل العرض تلقائياً عند زيارتك، بالإضافة إلى خصم 30% على خدمات التنظيف والتركيبات.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item reveal delay-2">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              <span>هل جلسات علاج العصب وحشو الجذور مؤلمة؟</span>
-              <div class="faq-icon-chevron">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                إطلاقاً، نستخدم أحدث أساليب التخدير الموضعي الفعالة وأجهزة حشو القنوات الآلية، مما يجعل الجلسة مريحة وخالية من أي شعور بالألم تماماً.
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item reveal delay-3">
-            <button class="faq-question" onclick="toggleFaq(this)">
-              <span>ما هي الخامات المستخدمة في تركيبات وتجميل الأسنان؟</span>
-              <div class="faq-icon-chevron">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-inner">
-                نعتمد حصرياً على خامات أوروبية معتمدة مثل الزيركون فائق الصلوبة وإيماكس التجميلي (E-max)، لضمان قوة تحمل عالية وشفافية تحاكي الأسنان الطبيعية بدقة.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final Call to Action -->
-    <section class="cta-banner-section">
-      <div class="container">
-        <div class="cta-banner reveal">
-          <h2>جاهز لتبدأ رحلة ابتسامتك المثالية؟</h2>
-          <p>تواصل معنا الآن، وحدد الموعد الأنسب لك واستفد من عرض الكشف والخصومات الخاصة.</p>
-          <div class="cta-buttons">
-            <a class="btn btn-white" href="tel:01029629627">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              اتصال مباشر: 01029629627
-            </a>
-            <a class="btn btn-whatsapp" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-              </svg>
-              حجز موعد عبر واتساب
-            </a>
-          </div>
+          <a class="btn btn-white" href="tel:01029629627">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            احجز موعدك الآن
+          </a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox" onclick="closeLightbox(event)">
+    <img id="lightbox-img" src="" alt="صورة المعرض">
+  </div>
+
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <b>عيادة أسنان د/ أحمد الشاعر</b>
-          <p>رعاية طبية وتجميلية متكاملة لأسنانك في مدينة نصر، القاهرة. نجمع بين أحدث التقنيات وأعلى معايير الراحة والأمان.</p>
-        </div>
-
-        <div>
-          <div class="footer-title">روابط سريعة</div>
-          <div class="footer-links">
-            <a href="#home">الصفحة الرئيسية</a>
-            <a href="#services">الخدمات الطبية</a>
-            <a href="#offer">العرض الخاص (150 ج)</a>
-            <a href="#about">عن الطبيب والعيادة</a>
-            <a href="#gallery">معرض الصور</a>
-            <a href="#location">الموقع ومواعيد العمل</a>
-          </div>
-        </div>
-
-        <div>
-          <div class="footer-title">معلومات الاتصال</div>
-          <div class="footer-links">
-            <span style="color: #cbd5e1; font-size: 0.88rem;">9 عمارات أول مايو، ميدان الساعة، مدينة نصر</span>
-            <a href="tel:01029629627" style="direction: ltr;">01029629627</a>
-            <a href="tel:01111231290" style="direction: ltr;">01111231290</a>
-            <span style="color: #94a3b8; font-size: 0.84rem;">السبت — الخميس: 2:00 م - 10:00 م</span>
-          </div>
-        </div>
+    <div class="container foot-content">
+      <div>
+        <b>عيادة أسنان د/ أحمد الشاعر</b>
+        <p>مدينة نصر - القاهرة</p>
       </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 عيادة أسنان د/ أحمد الشاعر. جميع الحقوق محفوظة.</p>
-        <a class="back-to-top" href="#home">
-          العودة للأعلى
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
-        </a>
-      </div>
+      <p>© 2026 جميع الحقوق محفوظة</p>
     </div>
   </footer>
 
-  <!-- Mobile Sticky Bottom Floating Action Bar -->
-  <div class="mobile-bottom-bar">
-    <a class="btn btn-secondary" href="tel:01029629627">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-      </svg>
-      اتصال مباشر
+  <!-- Mobile Fixed Bottom Action Bar -->
+  <div class="mobile-bar">
+    <a class="btn btn-primary" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">
+      احجز موعدك
     </a>
-    <a class="btn btn-whatsapp" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-      </svg>
-      حجز واتساب
+    <a class="btn btn-ghost" href="https://wa.me/201029629627" target="_blank" rel="noopener">
+      واتساب
     </a>
   </div>
 
-  <!-- JavaScript for Interactions & Smooth Animations -->
+  <!-- JavaScript -->
   <script>
-    // 1. Scroll Progress Bar
+    // Header shadow on scroll
     window.addEventListener('scroll', () => {
-      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = height > 0 ? (winScroll / height) : 0;
-      const bar = document.getElementById('scroll-progress');
-      if (bar) bar.style.transform = `scaleX(${scrolled})`;
-
-      // Header shadow on scroll
-      const header = document.getElementById('main-header');
-      if (header) {
-        if (winScroll > 40) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
+      const header = document.querySelector('header');
+      if (window.scrollY > 30) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
       }
     });
 
-    // 2. Mobile Menu Toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (menuToggle && mobileMenu) {
-      menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileNav = document.getElementById('mobile-nav');
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
       });
-      // Close mobile menu when clicking any link
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.remove('open');
-        });
+      mobileNav.querySelectorAll('a').forEach(l => {
+        l.addEventListener('click', () => mobileNav.classList.remove('open'));
       });
     }
 
-    // 3. Scroll Reveal Animations (IntersectionObserver)
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // 4. Spotlight Card Cursor Effect on Service Cards
-    document.querySelectorAll('.service-card').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        card.style.setProperty('--mouse-x', `${x}px`);
-        card.style.setProperty('--mouse-y', `${y}px`);
-      });
-    });
-
-    // 5. Lightbox Modal Functions
-    const modal = document.getElementById('lightbox-modal');
-    const modalImg = document.getElementById('lightbox-img');
+    // Lightbox modal
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
 
     function openLightbox(src) {
-      if (modal && modalImg) {
-        modalImg.src = src;
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+      if (lightbox && lightboxImg) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
       }
     }
 
     function closeLightbox(e) {
-      if (e && e.target !== modal && !e.target.closest('.lightbox-close') && e.target !== modalImg) {
-        return;
-      }
-      if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
+      if (lightbox) {
+        lightbox.classList.remove('active');
       }
     }
 
-    // Close lightbox on Escape key
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
-        closeLightbox();
-      }
-    });
-
-    // 6. FAQ Accordion Toggle
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      if (!item) return;
-      const wasActive = item.classList.contains('active');
+    // Interactive Calculator / Service Selection (Distinctive Feature)
+    function selectService(el, title, desc) {
+      document.querySelectorAll('.calc-opt').forEach(opt => opt.classList.remove('selected'));
+      el.classList.add('selected');
       
-      // Close all other FAQs
-      document.querySelectorAll('.faq-item').forEach(other => {
-        if (other !== item) other.classList.remove('active');
-      });
+      const titleEl = document.getElementById('selected-service-title');
+      const descEl = document.getElementById('selected-service-desc');
+      const waBtn = document.getElementById('calc-wa-btn');
 
-      // Toggle this item
-      if (wasActive) {
-        item.classList.remove('active');
-      } else {
-        item.classList.add('active');
+      if (titleEl) titleEl.innerText = 'الخدمة المختارة: ' + title;
+      if (descEl) descEl.innerText = 'العرض: ' + desc;
+      if (waBtn) {
+        const text = encodeURIComponent('أهلاً دكتور أحمد، عايز أحجز عرض ' + title);
+        waBtn.href = 'https://wa.me/201029629627?text=' + text;
       }
     }
   </script>
