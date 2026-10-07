@@ -750,33 +750,21 @@
       font-size: clamp(1.9rem, 3.2vw, 2.5rem);
       color: var(--navy);
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 6px;
+    }
+
+    .about-spec {
+      color: var(--primary);
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 16px;
     }
 
     .about-content p {
       color: var(--text-muted);
       font-size: 0.98rem;
       line-height: 1.85;
-      margin-bottom: 24px;
-    }
-
-    .checks-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .check-box {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      padding: 12px 16px;
-      border-radius: var(--radius-md);
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--navy);
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      margin-bottom: 16px;
     }
 
     .check-box svg {
@@ -1086,7 +1074,7 @@
       .hero { padding-top: 30px; }
       .hero-content h1 { font-size: 2.2rem; }
       .hero-trust { grid-template-columns: 1fr; gap: 12px; }
-      .services-grid, .journey-grid, .checks-grid { grid-template-columns: 1fr; }
+      .services-grid, .journey-grid { grid-template-columns: 1fr; }
       .photo-card { height: 360px; }
       .about-photo { height: 310px; }
       .foot-wrap { flex-direction: column; text-align: center; }
@@ -1471,27 +1459,18 @@
         <div class="about-content">
           <span class="eyebrow">عن الطبيب</span>
           <h2>د/ أحمد الشاعر</h2>
+          <div class="about-spec">أخصائي طب وجراحة وتجميل الأسنان</div>
           <p>
-            قسم تعريفي مختصر بالطبيب والعيادة. يمكن استبدال هذا النص بالمعلومات المهنية الرسمية التي يعتمدها الطبيب قبل نشر الموقع.
+            نهدف في عيادتنا إلى تقديم رعاية طبية متكاملة لجميع أفراد الأسرة، تجمع بين الدقة العلاجية وأعلى معايير الراحة النفسية للمريض، مع الحرص التام على توفير تجربة علاجية هادئة وبدون ألم.
           </p>
-
-          <div class="checks-grid">
-            <div class="check-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              موقع واضح للعيادة
-            </div>
-            <div class="check-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              تواصل مباشر
-            </div>
-            <div class="check-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              خدمات في مكان واحد
-            </div>
-            <div class="check-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              حجز موعد بسهولة
-            </div>
+          <p>
+            نعتمد على الفحص السريري الدقيق والاستماع الواعي لاحتياجات وشكوى كل حالة، مع وضع خطة علاجية واضحة ومفصلة تراعي الجانب الوظيفي والجمالي للأسنان، مع الالتزام بأحدث تقنيات التعقيم لضمان أفضل نتيجة تدوم طويلاً.
+          </p>
+          <div style="margin-top: 24px;">
+            <a class="btn btn-primary" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              احجز استشارة مع الطبيب
+            </a>
           </div>
         </div>
       </div>
