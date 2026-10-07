@@ -619,104 +619,101 @@
     }
 
     /* -------------------------------------------------------------
-       Interactive Appointment & Offer Selector
+       Interactive Booking Section (Matching Design)
        ------------------------------------------------------------- */
-    .calc-container {
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: 26px;
-      padding: 34px;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .calc-intro {
-      text-align: center;
-      margin-bottom: 26px;
-    }
-
-    .calc-intro h3 {
-      font-size: 1.45rem;
-      color: var(--navy);
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .calc-intro p {
-      color: var(--text-muted);
-      font-size: 0.92rem;
-    }
-
-    .calc-grid {
+    .book-card {
+      background: #082630;
+      color: #ffffff;
+      border-radius: 36px;
+      padding: clamp(32px, 5vw, 54px);
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-bottom: 24px;
-    }
-
-    .calc-btn {
-      background: var(--bg);
-      border: 1.5px solid var(--line);
-      border-radius: var(--radius-md);
-      padding: 16px;
-      cursor: pointer;
-      text-align: right;
-      transition: all 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .calc-btn:hover {
-      border-color: #b9daf5;
-    }
-
-    .calc-btn.selected {
-      background: var(--primary-soft);
-      border-color: var(--primary);
-      box-shadow: 0 4px 14px rgba(8, 123, 220, 0.12);
-    }
-
-    .calc-btn b {
-      color: var(--navy);
-      font-size: 0.95rem;
-      font-weight: 800;
-    }
-
-    .calc-btn span {
-      color: var(--text-muted);
-      font-size: 0.8rem;
-    }
-
-    .calc-btn.selected span {
-      color: var(--primary);
-      font-weight: 700;
-    }
-
-    .calc-output {
-      background: var(--primary-soft);
-      border: 1px solid rgba(8, 123, 220, 0.15);
-      border-radius: var(--radius-lg);
-      padding: 22px 26px;
-      display: flex;
+      grid-template-columns: 1fr 1.15fr;
+      gap: clamp(24px, 5vw, 60px);
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(8, 38, 48, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .calc-output-text b {
-      display: block;
-      color: var(--navy);
-      font-size: 1.1rem;
-      font-weight: 800;
-      margin-bottom: 2px;
+    .book-card h2 {
+      font-size: clamp(2rem, 3.6vw, 3rem);
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 8px;
     }
 
-    .calc-output-text span {
-      display: block;
-      color: var(--primary);
+    .book-card p {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.05rem;
+    }
+
+    .book-form {
+      display: grid;
+      gap: 15px;
+      position: relative;
+    }
+
+    .book-form label {
+      display: grid;
+      gap: 6px;
       font-size: 0.92rem;
       font-weight: 700;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .book-form input, .book-form select {
+      font-family: inherit;
+      font-size: 0.96rem;
+      padding: 13px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      width: 100%;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .book-form input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .book-form input:focus, .book-form select:focus {
+      outline: none;
+      border-color: #19c3b1;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .book-form select option {
+      color: #062a33;
+      background: #ffffff;
+    }
+
+    .book-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .btn-submit-booking {
+      background: #19c3b1;
+      color: #04222a;
+      font-weight: 900;
+      font-size: 1.02rem;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 22px rgba(25, 195, 177, 0.35);
+      margin-top: 4px;
+    }
+
+    .btn-submit-booking:hover {
+      background: #14ad9d;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(25, 195, 177, 0.45);
     }
 
     /* -------------------------------------------------------------
@@ -1101,16 +1098,19 @@
           <a href="#services">خدماتنا</a>
           <a href="#journey">خطوات الزيارة</a>
           <a href="#offer">العرض الخاص</a>
-          <a href="#calculator">حجز الموعد</a>
+          <a href="#book">احجز موعدك</a>
           <a href="#about">عن الطبيب</a>
           <a href="#gallery">الصور</a>
           <a href="#location">الموقع</a>
         </div>
 
         <div style="display: flex; gap: 10px; align-items: center;">
-          <a class="btn btn-primary" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF" target="_blank" rel="noopener">
+          <a class="btn btn-primary" href="#book">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              <path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
             </svg>
             احجز موعدك
           </a>
@@ -1131,7 +1131,7 @@
       <a href="#services">خدماتنا</a>
       <a href="#journey">خطوات الزيارة الأولى</a>
       <a href="#offer">العرض الخاص</a>
-      <a href="#calculator">تأكيد الموعد والعرض</a>
+      <a href="#book">احجز موعدك الآن</a>
       <a href="#about">عن د/ أحمد الشاعر</a>
       <a href="#gallery">معرض العيادة</a>
       <a href="#location">العنوان ومواعيد العمل</a>
@@ -1397,53 +1397,47 @@
       </div>
     </section>
 
-    <!-- Interactive Appointment & Offer Selector (Distinctive Feature) -->
-    <section id="calculator" style="padding-top: 20px;">
+    <!-- Interactive Booking Section (Matching Screenshot) -->
+    <section id="book" style="padding-top: 20px;">
       <div class="container">
-        <div class="calc-container">
-          <div class="calc-intro">
-            <span class="eyebrow">حجز سريع ومباشر</span>
-            <h3>حدد نوع الخدمة وتأكد من العرض</h3>
-            <p>اختر ما تبحث عنه لتجهيز رسالة الحجز المناسبة مباشرة على واتساب.</p>
+        <div class="book-card">
+          <div>
+            <h2>احجز موعدك الآن</h2>
+            <p>سنؤكد الموعد معك على واتساب.</p>
           </div>
 
-          <div class="calc-grid">
-            <button class="calc-btn selected" onclick="selectService(this, 'كشف واستشارة الأسنان', 'الكشف 150 جنيه بدلًا من 300 جنيه')">
-              <b>كشف واستشارة الأسنان</b>
-              <span>150 جنيه (خصم 50%)</span>
-            </button>
-            <button class="calc-btn" onclick="selectService(this, 'تنظيف وتلميع الأسنان', 'كشف 150ج + خصم 30% على التنظيف')">
-              <b>تنظيف وتلميع الأسنان</b>
-              <span>خصم 30% على الخدمة</span>
-            </button>
-            <button class="calc-btn" onclick="selectService(this, 'علاج العصب وحشو الأسنان', 'كشف 150ج + خصم 30% على الحشو')">
-              <b>علاج العصب والحشو</b>
-              <span>فحص وخطة علاج مخصصة</span>
-            </button>
-            <button class="calc-btn" onclick="selectService(this, 'تركيبات وزراعة الأسنان', 'كشف 150ج + خصم 30% على التركيبات')">
-              <b>تركيبات الأسنان</b>
-              <span>حلول تعويضية مناسبة</span>
-            </button>
-            <button class="calc-btn" onclick="selectService(this, 'تجميل وابتسامة هوليوود', 'كشف 150ج + خصم 30% على التجميل')">
-              <b>تجميل الأسنان</b>
-              <span>خيارات لتحسين الابتسامة</span>
-            </button>
-            <button class="calc-btn" onclick="selectService(this, 'استشارة تقويم الأسنان', 'كشف 150ج وتقييم تقويم الأسنان')">
-              <b>تقويم الأسنان</b>
-              <span>استشارة وتقييم الحالة</span>
-            </button>
-          </div>
+          <form class="book-form" id="booking-form" onsubmit="handleBookingSubmit(event)">
+            <label>
+              الاسم
+              <input type="text" name="name" id="book-name" required placeholder="اكتب اسمك بالكامل" autocomplete="name">
+            </label>
 
-          <div class="calc-output">
-            <div class="calc-output-text">
-              <b id="selected-service-title">الخدمة المختارة: كشف واستشارة الأسنان</b>
-              <span id="selected-service-desc">العرض: الكشف 150 جنيه بدلًا من 300 جنيه (خصم 50%)</span>
+            <div class="form-row">
+              <label>
+                الهاتف
+                <input type="tel" name="phone" id="book-phone" required placeholder="01xxxxxxxxx" autocomplete="tel">
+              </label>
+
+              <label>
+                اليوم المفضل
+                <input type="date" name="date" id="book-date">
+              </label>
             </div>
-            <a class="btn btn-primary" id="calc-wa-btn" href="https://wa.me/201029629627?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D8%AF%D9%83%D8%AA%D9%88%D8%B1%20%D8%A3%D8%AD%D9%85%D8%AF%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D9%85%D9%88%D8%B9%D8%AF%20%D9%83%D8%B4%D9%81%20%D9%88%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B3%D9%86%D8%A7%D9%86" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-              تأكيد حجز هذا الموعد عبر واتساب
-            </a>
-          </div>
+
+            <label>
+              الخدمة
+              <select name="service" id="book-service">
+                <option value="كشف واستشارة الأسنان (عرض 150 ج)">كشف واستشارة الأسنان (عرض 150 ج)</option>
+                <option value="تنظيف وتبييض الأسنان">تنظيف وتبييض الأسنان</option>
+                <option value="حشو وعلاج عصب">حشو وعلاج عصب</option>
+                <option value="تركيبات وزراعة الأسنان">تركيبات وزراعة الأسنان</option>
+                <option value="تقويم الأسنان">تقويم الأسنان</option>
+                <option value="تجميل وابتسامة هوليوود">تجميل وابتسامة هوليوود</option>
+              </select>
+            </label>
+
+            <button type="submit" class="btn-submit-booking">أرسل طلب الحجز</button>
+          </form>
         </div>
       </div>
     </section>
@@ -1706,21 +1700,17 @@
       }
     }
 
-    // Interactive Service Selector
-    function selectService(el, title, desc) {
-      document.querySelectorAll('.calc-btn').forEach(btn => btn.classList.remove('selected'));
-      el.classList.add('selected');
-      
-      const titleEl = document.getElementById('selected-service-title');
-      const descEl = document.getElementById('selected-service-desc');
-      const waBtn = document.getElementById('calc-wa-btn');
+    // Interactive Booking Form Submit
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('book-name').value.trim();
+      const phone = document.getElementById('book-phone').value.trim();
+      const date = document.getElementById('book-date').value || 'أقرب موعد متاح';
+      const service = document.getElementById('book-service').value;
 
-      if (titleEl) titleEl.innerText = 'الخدمة المختارة: ' + title;
-      if (descEl) descEl.innerText = 'العرض: ' + desc;
-      if (waBtn) {
-        const text = encodeURIComponent('أهلاً دكتور أحمد، عايز أحجز موعد ' + title);
-        waBtn.href = 'https://wa.me/201029629627?text=' + text;
-      }
+      const text = `مرحبًا دكتور أحمد الشاعر، أريد حجز موعد في العيادة:%0A- الاسم: ${encodeURIComponent(name)}%0A- الهاتف: ${encodeURIComponent(phone)}%0A- الخدمة: ${encodeURIComponent(service)}%0A- اليوم المفضل: ${encodeURIComponent(date)}`;
+      
+      window.open(`https://wa.me/201029629627?text=${text}`, '_blank', 'noopener');
     }
 
     // FAQ Accordion Toggle
